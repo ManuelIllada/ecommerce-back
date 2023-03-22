@@ -1,5 +1,14 @@
 const { Model, DataTypes } = require("sequelize");
 
+// const slugify = require("slugify");
+
+// slugify(toString(this.name), {
+//   replacement: "-",
+//   remove: undefined,
+//   lower: true,
+//   strict: false,
+// })
+
 class Product extends Model {
   static initModel(sequelize) {
     Product.init(
