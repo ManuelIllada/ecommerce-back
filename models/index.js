@@ -39,11 +39,8 @@ Order.belongsTo(Status);
 Category.hasMany(Product);
 Product.belongsTo(Category);
 
-sequelize.sync({ alter: true }).then(function () {
-  console.log("Se han sincronizado");
-});
-
 module.exports = {
+  sequelize,
   Admin,
   Category,
   Order,

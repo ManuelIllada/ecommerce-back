@@ -19,10 +19,10 @@ class Product extends Model {
           type: DataTypes.JSON,
         },
         price: {
-          type: DataTypes.NUMBER,
+          type: DataTypes.DECIMAL,
         },
         stock: {
-          type: DataTypes.NUMBER,
+          type: DataTypes.INTEGER,
         },
         featured: {
           type: DataTypes.BOOLEAN,

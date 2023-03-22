@@ -15,8 +15,10 @@
  */
 
 require("dotenv").config();
+const { sequelize } = require("../models/index");
 
 async function runAllSeeders() {
+  await sequelize.sync({ force: true });
   await require("./categorySeeder")();
   await require("./productSeeder")();
   await require("./userSeeder")();
