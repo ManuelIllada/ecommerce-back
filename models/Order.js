@@ -1,29 +1,25 @@
 const { Model, DataTypes } = require("sequelize");
 
-class Article extends Model {
+class Order extends Model {
   static initModel(sequelize) {
-    Article.init(
+    Order.init(
       {
         id: {
           type: DataTypes.BIGINT.UNSIGNED,
           primaryKey: true,
           autoIncrement: true,
         },
-        title: {
-          type: DataTypes.STRING,
-        },
-        content: {
-          type: DataTypes.TEXT,
+        products: {
+          type: DataTypes.JSON,
         },
       },
       {
         sequelize,
-        modelName: "article",
+        modelName: "order",
       },
     );
-
-    return Article;
+    return Order;
   }
 }
 
-module.exports = Article;
+module.exports = Order;

@@ -2,13 +2,12 @@ require("dotenv").config();
 
 const express = require("express");
 const routes = require("./routes");
-const APP_PORT = process.env.APP_PORT || 3000;
+const APP_PORT = process.env.APP_PORT || 8000;
 const app = express();
 
-app.use(methodOverride("_method"));
+// Falta agregar midware de JSON
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
-app.set("view engine", "ejs");
 
 routes(app);
 

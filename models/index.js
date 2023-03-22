@@ -11,22 +11,44 @@ const sequelize = new Sequelize(
   },
 );
 
+const Admin = require("./Admin");
+const Category = require("./Category");
+const Order = require("./Order");
+const Photo = require("./Photo");
+const Product = require("./Product");
+const Status = require("./Status");
 const User = require("./User");
-const Comment = require("./Comment");
-const Article = require("./Article");
 
 User.initModel(sequelize);
-Comment.initModel(sequelize);
-Article.initModel(sequelize);
+Admin.initModel(sequelize);
+Category.initModel(sequelize);
+Order.initModel(sequelize);
+Product.initModel(sequelize);
+Status.initModel(sequelize);
 
 /**
  * Luego de definir los modelos, se pueden establecer relaciones entre los
  * mismos (usando métodos como belongsTo, hasMany y belongsToMany)...
  */
 
+User.hasMany(Order);
+Order.belongsTo(User);
+
+User.hasMany(Comment);
+Comment.belongsTo(User);
+
+Article.hasMany(Comment);
+Comment.belongsTo(Article);
+
+sequelize.sync({ alter: true }).then(function () {
+  console.log("Se han sincronizado");
+});
+
 module.exports = {
-  sequelize,
+  Admin,
+  Category,
+  Order,
+  Product,
+  Status,
   User,
-  Comment,
-  Article,
 };
