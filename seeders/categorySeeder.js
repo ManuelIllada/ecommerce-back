@@ -19,21 +19,28 @@
  * terminal.
  *
  */
-const { faker } = require("@faker-js/faker");
-const { Article, User } = require("../models");
 
-faker.locale = "es";
+const { Category } = require("../models");
 
 module.exports = async () => {
-  const articles = [];
+  const category = [
+    {
+      name: "Scooter",
+    },
+    {
+      name: "Electric Bike",
+    },
+    {
+      name: "One Wheel",
+    },
+    {
+      name: "Electric Unicycle",
+    },
+    {
+      name: "Accesories",
+    },
+  ];
 
-  for (let i = 0; i < 3000; i++) {
-    User.push({
-      firstname: faker.firstname.sentence(),
-      lastname: faker.lastname.paragraphs(),
-    });
-  }
-
-  await Article.bulkCreate(articles);
-  console.log("[Database] Se corrió el seeder de Articles.");
+  await Category.bulkCreate(category);
+  console.log("[Database] Se corrió el seeder de Category.");
 };

@@ -27,6 +27,9 @@ class User extends Model {
         phone: {
           type: DataTypes.STRING,
         },
+        avatar: {
+          type: DataTypes.STRING,
+        },
       },
       {
         sequelize,

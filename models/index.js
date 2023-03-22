@@ -14,7 +14,6 @@ const sequelize = new Sequelize(
 const Admin = require("./Admin");
 const Category = require("./Category");
 const Order = require("./Order");
-const Photo = require("./Photo");
 const Product = require("./Product");
 const Status = require("./Status");
 const User = require("./User");
@@ -34,11 +33,11 @@ Status.initModel(sequelize);
 User.hasMany(Order);
 Order.belongsTo(User);
 
-User.hasMany(Comment);
-Comment.belongsTo(User);
+Status.hasMany(Order);
+Order.belongsTo(Status);
 
-Article.hasMany(Comment);
-Comment.belongsTo(Article);
+Category.hasMany(Product);
+Product.belongsTo(Category);
 
 sequelize.sync({ alter: true }).then(function () {
   console.log("Se han sincronizado");
