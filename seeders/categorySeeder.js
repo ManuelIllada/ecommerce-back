@@ -25,19 +25,19 @@ const { Category } = require("../models");
 module.exports = async () => {
   const category = [
     {
-      name: "Scooter",
+      name: "Unicycles",
     },
     {
-      name: "Electric Bike",
+      name: "Boards",
     },
     {
-      name: "One Wheel",
+      name: "Scooters",
     },
     {
-      name: "Electric Unicycle",
+      name: "Bikes",
     },
     {
-      name: "Accesories",
+      name: "Accessories",
     },
   ];
 
