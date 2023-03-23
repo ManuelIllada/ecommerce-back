@@ -16,6 +16,9 @@ class Category extends Model {
         slug: {
           type: DataTypes.STRING,
         },
+        media: {
+          type: DataTypes.STRING,
+        },
       },
       {
         sequelize,
