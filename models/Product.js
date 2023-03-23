@@ -1,13 +1,5 @@
 const { Model, DataTypes } = require("sequelize");
-
-// const slugify = require("slugify");
-
-// slugify(toString(this.name), {
-//   replacement: "-",
-//   remove: undefined,
-//   lower: true,
-//   strict: false,
-// })
+const slugify = require("slugify");
 
 class Product extends Model {
   static initModel(sequelize) {
@@ -45,6 +37,17 @@ class Product extends Model {
         modelName: "product",
       },
     );
+
+    Product.beforeBulkCreate((products) => {
+      for (const product of products) {
+        product.slug = slugify(product.name, {
+          replacement: "-",
+          remove: undefined,
+          lower: true,
+          strict: false,
+        });
+      }
+    });
 
     return Product;
   }
