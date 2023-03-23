@@ -1,8 +1,9 @@
-const { Product } = require("../models");
+const { Product, Category } = require("../models");
 
 // Display a listing of the resource.
 async function index(req, res) {
   const products = await Product.findAll();
+
   res.json(products);
 }
 
