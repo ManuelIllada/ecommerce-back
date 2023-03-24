@@ -19,6 +19,9 @@ class Category extends Model {
         media: {
           type: DataTypes.STRING,
         },
+        cardImage: {
+          type: DataTypes.STRING,
+        },
       },
       {
         sequelize,

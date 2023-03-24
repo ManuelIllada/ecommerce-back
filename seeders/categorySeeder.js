@@ -28,25 +28,34 @@ module.exports = async () => {
       name: "Unicycles",
       media:
         "https://vrooominpevdatabase.b-cdn.net/promo-banners/2022/november/inmotion-v13-rider-road.jpg",
+      cardImage:
+        "https://cdn.discordapp.com/attachments/852698000890658876/1088537684215070864/categorywheels.jpg",
     },
     {
       name: "Boards",
       media:
         "https://images.unsplash.com/photo-1624736712294-7b714a6c9ab5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1931&q=80",
+      cardImage: "https://www.soflow.com/app/uploads/blogs/9/2020/09/2-600x1011.jpg",
     },
     {
       name: "Scooters",
       media:
         "https://www.bbva.com/wp-content/uploads/2021/06/BBVA-patinete-electrico-movilidad-sostenibilidad-transporte.jpg",
+      cardImage:
+        "https://cdn.discordapp.com/attachments/852698000890658876/1088545692542324917/7d1bdf155036743.png",
     },
     {
       name: "Bikes",
       media:
         "https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2021/09/mujer-montada-bicicleta-electrica-mirando-mar-2467819.jpg",
+      cardImage:
+        "https://cdn.discordapp.com/attachments/852698000890658876/1088545947669241926/categorybike.jpg",
     },
     {
       name: "Accessories",
       media:
+        "https://p.vitalmtb.com/photos/features/2798/title_image_mobile/s1600_Holiday_Gift_Guide_Groms_993206.jpg",
+      cardImage:
         "https://p.vitalmtb.com/photos/features/2798/title_image_mobile/s1600_Holiday_Gift_Guide_Groms_993206.jpg",
     },
   ];
