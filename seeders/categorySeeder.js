@@ -25,27 +25,27 @@ const { Category } = require("../models");
 module.exports = async () => {
   const category = [
     {
-      name: "Scooter",
-      media:
-        "https://www.bbva.com/wp-content/uploads/2021/06/BBVA-patinete-electrico-movilidad-sostenibilidad-transporte.jpg",
-    },
-    {
-      name: "Electric Bike",
-      media:
-        "https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2021/09/mujer-montada-bicicleta-electrica-mirando-mar-2467819.jpg",
-    },
-    {
-      name: "One Wheel",
-      media:
-        "https://images.unsplash.com/photo-1624736712294-7b714a6c9ab5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1931&q=80",
-    },
-    {
-      name: "Electric Unicycle",
+      name: "Unicycles",
       media:
         "https://imechewebresources.blob.core.windows.net/imeche-web-content/images/default-source/pe-news/off-road.jpg?sfvrsn=76bd9e12_0",
     },
     {
-      name: "Accesories",
+      name: "Boards",
+      media:
+        "https://images.unsplash.com/photo-1624736712294-7b714a6c9ab5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1931&q=80",
+    },
+    {
+      name: "Scooters",
+      media:
+        "https://www.bbva.com/wp-content/uploads/2021/06/BBVA-patinete-electrico-movilidad-sostenibilidad-transporte.jpg",
+    },
+    {
+      name: "Bikes",
+      media:
+        "https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2021/09/mujer-montada-bicicleta-electrica-mirando-mar-2467819.jpgs",
+    },
+    {
+      name: "Accessories",
       media:
         "https://ttbiketriatlon.com/wp-content/uploads/2020/06/10-accesorios-imprescindibles-para-bicicletas-de-triatl%C3%B3n-1.jpg",
     },
