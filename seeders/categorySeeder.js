@@ -27,7 +27,7 @@ module.exports = async () => {
     {
       name: "Unicycles",
       media:
-        "https://imechewebresources.blob.core.windows.net/imeche-web-content/images/default-source/pe-news/off-road.jpg?sfvrsn=76bd9e12_0",
+        "https://vrooominpevdatabase.b-cdn.net/promo-banners/2022/november/inmotion-v13-rider-road.jpg",
     },
     {
       name: "Boards",
@@ -42,12 +42,12 @@ module.exports = async () => {
     {
       name: "Bikes",
       media:
-        "https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2021/09/mujer-montada-bicicleta-electrica-mirando-mar-2467819.jpgs",
+        "https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2021/09/mujer-montada-bicicleta-electrica-mirando-mar-2467819.jpg",
     },
     {
       name: "Accessories",
       media:
-        "https://ttbiketriatlon.com/wp-content/uploads/2020/06/10-accesorios-imprescindibles-para-bicicletas-de-triatl%C3%B3n-1.jpg",
+        "https://p.vitalmtb.com/photos/features/2798/title_image_mobile/s1600_Holiday_Gift_Guide_Groms_993206.jpg",
     },
   ];
 
