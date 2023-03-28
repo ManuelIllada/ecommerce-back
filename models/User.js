@@ -37,6 +37,8 @@ class User extends Model {
       },
     );
     return User;
+
+    //hook beforeCreate
   }
 }
 
