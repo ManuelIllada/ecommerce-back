@@ -1,6 +1,7 @@
 const { User } = require("../models");
 const formidable = require("formidable");
 const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
 
 // Display a listing of the resource.
 async function index(req, res) {}
@@ -56,9 +57,9 @@ async function login(req, res) {
     const checkPassword = await bcrypt.compare(password, hash);
 
     if (checkPassword) {
-      //     var token = jwt.sign({ id: user._id }, `${process.env.SESSION_SECRET}`);
+      const token = jwt.sign({ id: user.id }, `${process.env.SESSION_SECRET}`);
       res.send({
-        //token: token,
+        token: token,
         id: user._id,
         firstname: user.firstname,
         lastname: user.lastname,
@@ -66,9 +67,6 @@ async function login(req, res) {
         phone: user.phone,
         avatar: user.avatar,
       });
-      console.log("User found");
-    } else {
-      console.log("Invalid credentials");
     }
   } else {
     return res.status(404).json({ error: "Invalid credentials" });
