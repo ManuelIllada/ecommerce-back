@@ -14,28 +14,55 @@ async function create(req, res) {}
 
 // Store a newly created resource in storage.
 async function store(req, res) {
-  const form = formidable({
-    multiples: true,
-    uploadDir: __dirname + "/public/img",
-    keepExtensions: true,
-  });
-  console.log(req.body);
-  form.parse(req, async (err, fields, files) => {
-    console.log("entra");
-    const passwordParaHashear = fields.password;
-    const passwordHasheado = await bcrypt.hash(passwordParaHashear, 10);
-    const { firstname, lastname, email, address, phone } = fields;
-    const user = await User.create({
-      firstname,
-      lastname,
-      email,
-      address,
-      password: passwordHasheado,
-      phone,
-      avatar: files.avatar.newFilename,
+  try {
+    const form = formidable({
+      multiples: false,
+      uploadDir: __dirname + "/../public/img",
+      keepExtensions: true,
     });
-    return res.json(user);
-  });
+
+    form.parse(req, async (err, fields, files) => {
+      const { firstname, lastname, email, username, phone, address, password, avatar } = fields;
+
+      const user = await User.create({
+        firstname: firstname,
+        lastname: lastname,
+        email: email,
+        username: username,
+        password: password,
+        phone: phone,
+        address: address,
+        avatar: files.avatar.newFilename,
+      });
+
+      await user.save();
+
+      return res.status(200).send(user);
+    });
+  } catch {
+    res.status(500).send("Error del servidor");
+  }
+  // const form = formidable({
+  //   multiples: true,
+  //   uploadDir: __dirname + "/public/img",
+  //   keepExtensions: true,
+  // });
+  // form.parse(req, async (err, fields, files) => {
+  //   const passwordParaHashear = fields.password;
+  //   const passwordHasheado = await bcrypt.hash(passwordParaHashear, 10);
+  //   const { firstname, lastname, email, address, phone } = fields;
+  //   const user = await User.create({
+  //     firstname,
+  //     lastname,
+  //     email,
+  //     address,
+  //     password: passwordHasheado,
+  //     phone,
+  //     avatar: files.avatar.newFilename,
+  //   });
+  //   console.log(user);
+  //   return res.json(user);
+  // });
 }
 
 // Show the form for editing the specified resource.
