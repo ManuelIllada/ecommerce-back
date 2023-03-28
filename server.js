@@ -9,6 +9,7 @@ app.use(cors());
 // Falta agregar midware de JSON
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 routes(app);
 

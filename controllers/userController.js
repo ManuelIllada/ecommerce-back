@@ -1,4 +1,5 @@
 const { User } = require("../models");
+const bcrypt = require("bcryptjs");
 
 // Display a listing of the resource.
 async function index(req, res) {}
@@ -21,8 +22,35 @@ async function update(req, res) {}
 // Remove the specified resource from storage.
 async function destroy(req, res) {}
 
-// Otros handlers...
-// ...
+async function login(req, res) {
+  const { email, password } = req.body;
+  const user = await User.findOne({
+    where: { email: req.body.email },
+  });
+  if (user) {
+    const hash = user.password;
+    const checkPassword = await bcrypt.compare(password, hash);
+
+    if (checkPassword) {
+      //     var token = jwt.sign({ id: user._id }, `${process.env.SESSION_SECRET}`);
+      res.send({
+        //token: token,
+        id: user._id,
+        firstname: user.firstname,
+        lastname: user.lastname,
+        address: user.address,
+        phone: user.phone,
+        avatar: user.avatar,
+      });
+      console.log("User found");
+    } else {
+      console.log("Invalid credentials");
+    }
+  } else {
+    return res.status(404).json({ error: "Invalid credentials" });
+  }
+  res.end();
+}
 
 module.exports = {
   index,
@@ -32,4 +60,5 @@ module.exports = {
   edit,
   update,
   destroy,
+  login,
 };
