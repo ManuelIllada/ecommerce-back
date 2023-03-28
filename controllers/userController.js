@@ -1,5 +1,5 @@
 const { User } = require("../models");
-const bcrypt = require("bcryptjs");
+
 const formidable = require("formidable");
 const { faker } = require("@faker-js/faker");
 const jwt = require("jsonwebtoken");
