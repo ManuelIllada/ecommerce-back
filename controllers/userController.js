@@ -1,5 +1,5 @@
 const { User } = require("../models");
-const bcrypt = require("bcryptjs");
+
 const formidable = require("formidable");
 const bcrypt = require("bcryptjs");
 const { faker } = require("@faker-js/faker");
