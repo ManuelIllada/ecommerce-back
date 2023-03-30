@@ -21,7 +21,7 @@ async function create(req, res) {}
 // Store a newly created resource in storage.
 async function store(req, res) {
   const { name } = req.body;
-  console.log(name);
+
   try {
     const category = await Category.create({ name: name });
     await category.save();
@@ -35,10 +35,36 @@ async function store(req, res) {
 async function edit(req, res) {}
 
 // Update the specified resource in storage.
-async function update(req, res) {}
+async function update(req, res) {
+  const { id, name } = req.body;
+
+  const category = await Category.findByPk(id);
+
+  if (!category) throw new Error("No record found");
+
+  const result = await category.update({ name: name });
+
+  if (result) {
+    res.status(201).json({
+      result,
+    });
+  } else {
+    res.status(400);
+    throw new Error("Invalid data");
+  }
+}
 
 // Remove the specified resource from storage.
-async function destroy(req, res) {}
+async function destroy(req, res) {
+  const result = await Category.destroy({ where: { id: req.params.id } });
+  if (result) {
+    res.status(201).json({
+      result: "Borrado exitosamente",
+    });
+  } else {
+    res.status(400).json({ error: "Invalid data" });
+  }
+}
 
 // Otros handlers...
 // ...
