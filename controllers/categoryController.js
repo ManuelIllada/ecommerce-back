@@ -19,7 +19,17 @@ async function show(req, res) {
 async function create(req, res) {}
 
 // Store a newly created resource in storage.
-async function store(req, res) {}
+async function store(req, res) {
+  const { name } = req.body;
+  console.log(name);
+  try {
+    const category = await Category.create({ name: name });
+    await category.save();
+  } catch (error) {
+    res.status(500).send({ error: error });
+  }
+  res.status(200).send({ message: "Categoria creada correctamente.." });
+}
 
 // Show the form for editing the specified resource.
 async function edit(req, res) {}

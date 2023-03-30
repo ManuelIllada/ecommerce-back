@@ -3,8 +3,8 @@ const router = express.Router();
 const categoryController = require("../controllers/categoryController");
 
 router.get("/", categoryController.index);
-//router.get("/crear", categoryController.create);
-//router.post("/", categoryController.store);
+router.get("/crear", categoryController.create);
+router.post("/", categoryController.store);
 router.get("/:id", categoryController.show);
 //router.get("/:id/editar", categoryController.edit);
 //router.patch("/:id", categoryController.update);
