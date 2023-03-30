@@ -4,7 +4,10 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
 // Display a listing of the resource.
-async function index(req, res) {}
+async function index(req, res) {
+  const users = await User.findAll();
+  res.json(users);
+}
 
 // Display the specified resource.
 async function show(req, res) {}
