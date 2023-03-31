@@ -58,10 +58,10 @@ async function destroy(req, res) {
   const result = await Category.destroy({ where: { id: req.params.id } });
   if (result) {
     res.status(201).json({
-      result: "Borrado exitosamente",
+      message: "Borrado exitosamente",
     });
   } else {
-    res.status(400).json({ error: "Invalid data" });
+    res.status(400).json({ error: "Error al momento de Eliminar" });
   }
 }
 
