@@ -1,3 +1,4 @@
+const formidable = require("formidable");
 const { Product, Category } = require("../models");
 
 // Display a listing of the resource.
@@ -14,7 +15,37 @@ async function show(req, res) {}
 async function create(req, res) {}
 
 // Store a newly created resource in storage.
-async function store(req, res) {}
+async function store(req, res) {
+  try {
+    const form = formidable({
+      multiples: true,
+      uploadDir: __dirname + "/../public/img",
+      keepExtensions: true,
+    });
+
+    form.parse(req, async (err, fields, files) => {
+      const { name, description, price, stock, featured, category } = fields;
+      if (name === "")
+        return res.status(500).json({ error: "No se puede crear una producto vacia 😢" });
+
+      const product = await Product.create({
+        name: name,
+        description: description,
+        price: price,
+        stock: stock,
+        featured: featured,
+        categoryId: category,
+        media: files.media.map((file) => file.newFilename),
+      });
+
+      await product.save();
+
+      return res.status(200).json({ message: "Producto creado con Exito🚀 " });
+    });
+  } catch (err) {
+    res.status(500).json({ error: err });
+  }
+}
 
 // Show the form for editing the specified resource.
 async function edit(req, res) {}

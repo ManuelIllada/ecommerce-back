@@ -18,6 +18,7 @@ class Product extends Model {
         },
         media: {
           type: DataTypes.JSON,
+          defaultValue: [],
         },
         price: {
           type: DataTypes.DECIMAL,

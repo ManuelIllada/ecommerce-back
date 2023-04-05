@@ -1,6 +1,6 @@
-const { Model } = require("sequelize");
 const { Category } = require("../models");
 const { Product } = require("../models");
+const formidable = require("formidable");
 
 // Display a listing of the resource.
 async function index(req, res) {
@@ -20,13 +20,30 @@ async function create(req, res) {}
 
 // Store a newly created resource in storage.
 async function store(req, res) {
-  const { name } = req.body;
-  if (name === "") {
-    res.status(500).send({ error: "No se puede crear una categoria vacia 😢" });
-  } else {
-    const category = await Category.create({ name: name });
-    await category.save();
-    res.status(200).send({ message: "Categoria creada correctamente..🚀" });
+  try {
+    const form = formidable({
+      multiples: false,
+      uploadDir: __dirname + "/../public/img",
+      keepExtensions: true,
+    });
+
+    form.parse(req, async (err, fields, files) => {
+      const { name } = fields;
+      if (name === "")
+        return res.status(500).json({ error: "No se puede crear una categoria vacia 😢" });
+
+      const category = await Category.create({
+        name: name,
+        media: files.media.newFilename,
+        cardImage: files.cardImage.newFilename,
+      });
+
+      await category.save();
+
+      return res.status(200).json({ messagers: "Categoria creada con Exito🚀 " });
+    });
+  } catch (err) {
+    res.status(500).json({ error: err });
   }
 }
 
