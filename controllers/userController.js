@@ -25,7 +25,7 @@ async function store(req, res) {
     });
 
     form.parse(req, async (err, fields, files) => {
-      const { firstname, lastname, email, username, phone, address, password, avatar } = fields;
+      const { firstname, lastname, email, username, phone, address, password } = fields;
 
       const user = await User.create({
         firstname: firstname,
@@ -40,32 +40,11 @@ async function store(req, res) {
 
       await user.save();
 
-      return res.status(200).send(user);
+      return res.status(200).json({ message: "Usuario creado con Exito🚀 " });
     });
   } catch {
-    res.status(500).send("Error del servidor");
+    res.status(500).json({ error: err });
   }
-  // const form = formidable({
-  //   multiples: true,
-  //   uploadDir: __dirname + "/public/img",
-  //   keepExtensions: true,
-  // });
-  // form.parse(req, async (err, fields, files) => {
-  //   const passwordParaHashear = fields.password;
-  //   const passwordHasheado = await bcrypt.hash(passwordParaHashear, 10);
-  //   const { firstname, lastname, email, address, phone } = fields;
-  //   const user = await User.create({
-  //     firstname,
-  //     lastname,
-  //     email,
-  //     address,
-  //     password: passwordHasheado,
-  //     phone,
-  //     avatar: files.avatar.newFilename,
-  //   });
-  //   console.log(user);
-  //   return res.json(user);
-  // });
 }
 
 // Show the form for editing the specified resource.
