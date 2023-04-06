@@ -9,23 +9,11 @@ class Admin extends Model {
           primaryKey: true,
           autoIncrement: true,
         },
-        firstname: {
-          type: DataTypes.STRING,
-        },
-        lastname: {
-          type: DataTypes.STRING,
-        },
         email: {
           type: DataTypes.STRING,
         },
         password: {
           type: DataTypes.STRING,
-        },
-        phone: {
-          type: DataTypes.STRING,
-        },
-        rol: {
-          type: DataTypes.SMALLINT,
         },
       },
       {
