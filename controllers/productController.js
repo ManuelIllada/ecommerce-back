@@ -51,7 +51,37 @@ async function store(req, res) {
 async function edit(req, res) {}
 
 // Update the specified resource in storage.
-async function update(req, res) {}
+async function update(req, res) {
+  const { id } = req.params;
+  try {
+    const form = formidable({
+      multiples: true,
+      uploadDir: __dirname + "/../public/img",
+      keepExtensions: true,
+    });
+
+    form.parse(req, async (err, fields, files) => {
+      const { name, description, price, stock, featured, category } = fields;
+
+      const product = await Product.update(
+        {
+          name: name,
+          description: description,
+          price: price,
+          stock: stock,
+          featured: featured,
+          categoryId: category,
+          media: files.media.map((file) => file.newFilename),
+        },
+        { where: { id: id } },
+      );
+
+      return res.status(200).json({ message: "Producto editado con Exito🚀 " });
+    });
+  } catch (err) {
+    res.status(500).json({ error: err });
+  }
+}
 
 // Remove the specified resource from storage.
 async function destroy(req, res) {}
