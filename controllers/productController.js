@@ -84,7 +84,17 @@ async function update(req, res) {
 }
 
 // Remove the specified resource from storage.
-async function destroy(req, res) {}
+async function destroy(req, res) {
+  const { id } = req.params;
+  const result = await Product.destroy({ where: { id: id } });
+  if (result) {
+    res.status(201).json({
+      message: "Borrado exitosamente 🚀",
+    });
+  } else {
+    res.status(400).json({ error: "Error al momento de Eliminar 😢" });
+  }
+}
 
 // Otros handlers...
 // ...
