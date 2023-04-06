@@ -27,7 +27,7 @@ async function store(req, res) {
     form.parse(req, async (err, fields, files) => {
       const { firstname, lastname, email, username, phone, address, password } = fields;
 
-      const user = await User.create({
+      await User.create({
         firstname: firstname,
         lastname: lastname,
         email: email,
@@ -51,10 +51,50 @@ async function store(req, res) {
 async function edit(req, res) {}
 
 // Update the specified resource in storage.
-async function update(req, res) {}
+async function update(req, res) {
+  const { id } = req.params;
+  try {
+    const form = formidable({
+      multiples: true,
+      uploadDir: __dirname + "/../public/img",
+      keepExtensions: true,
+    });
+
+    form.parse(req, async (err, fields, files) => {
+      const { firstname, lastname, email, address, password, phone } = fields;
+
+      await User.update(
+        {
+          firstname: firstname,
+          lastname: lastname,
+          email: email,
+          address: address,
+          password: password,
+          phone: phone,
+          avatar: files.avatar.newFilename,
+        },
+        { where: { id: id } },
+      );
+
+      return res.status(200).json({ message: "Usuario editado con Exito🚀 " });
+    });
+  } catch (err) {
+    res.status(500).json({ error: err });
+  }
+}
 
 // Remove the specified resource from storage.
-async function destroy(req, res) {}
+async function destroy(req, res) {
+  const { id } = req.params;
+  const result = await User.destroy({ where: { id: id } });
+  if (result) {
+    res.status(201).json({
+      message: "Borrado exitosamente 🚀",
+    });
+  } else {
+    res.status(400).json({ error: "Error al momento de Eliminar 😢" });
+  }
+}
 
 async function login(req, res) {
   const { email, password } = req.body;
