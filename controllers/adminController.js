@@ -9,10 +9,9 @@ async function login(req, res) {
     where: { email: req.body.email },
   });
   if (admin) {
-    const match = admin.password === password;
-    //const checkPassword = await bcrypt.compare(password, hash);
-
-    if (match) {
+    const checkPassword = await bcrypt.compare(password, admin.password);
+    console.log(checkPassword);
+    if (checkPassword) {
       const token = jwt.sign({ id: admin.id }, `${process.env.SESSION_SECRET}`);
       res.status(200).json({
         token: token,
