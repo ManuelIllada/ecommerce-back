@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
+const adminController = require("../controllers/adminController");
 
-// Rutas relacionadas a la parte pública del sitio web:
-// ...
+router.post("/login", adminController.login);
 
 module.exports = router;

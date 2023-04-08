@@ -1,41 +1,38 @@
-/**
- * Este archivo se utiliza en un proyecto donde se está utlizando server-side
- * rendering (ej: con un motor de templates como EJS). Tiene como objetivo
- * mostrar (renderear) páginas que no están directamente relacionandas con
- * una entidad del proyecto.
- *
- * Ejemplos:
- *   - Página de inicio (Home).
- *   - Página de contacto.
- *   - Página con política de privacidad.
- *   - Página con términos y condiciones.
- *   - Página con preguntas frecuentes (FAQ).
- *   - Etc.
- *
- * En caso de estar creando una API, este controlador carece de sentido y
- * no debería existir.
- */
-
 const { Article } = require("../models");
 
-async function showHome(req, res) {
-  const articles = await Article.findAll();
-  res.render("home", { articles });
-}
+async function login(req, res) {
+  console.log("login...");
+  /* 
+    const { email, password } = req.body;
+    const user = await User.findOne({
+      where: { email: req.body.email },
+    });
+    if (user) {
+      const hash = user.password;
+      const checkPassword = await bcrypt.compare(password, hash);
 
-async function showContact(req, res) {
-  res.render("contact");
-}
-
-async function showAboutUs(req, res) {
-  res.render("aboutUs");
+      if (checkPassword) {
+        const token = jwt.sign({ id: user.id }, `${process.env.SESSION_SECRET}`);
+        res.send({
+          token: token,
+          id: user._id,
+          firstname: user.firstname,
+          lastname: user.lastname,
+          address: user.address,
+          phone: user.phone,
+          avatar: user.avatar,
+        });
+      }
+    } else {
+      return res.status(404).json({ error: "Invalid credentials" });
+    }
+    res.end();
+  } */
 }
 
 // Otros handlers...
 // ...
 
 module.exports = {
-  showHome,
-  showContact,
-  showAboutUs,
+  login,
 };
