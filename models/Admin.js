@@ -9,10 +9,16 @@ class Admin extends Model {
           primaryKey: true,
           autoIncrement: true,
         },
+        avatar: {
+          type: DataTypes.STRING,
+        },
         email: {
           type: DataTypes.STRING,
         },
         password: {
+          type: DataTypes.STRING,
+        },
+        token: {
           type: DataTypes.STRING,
         },
       },

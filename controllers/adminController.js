@@ -1,33 +1,28 @@
-const { Article } = require("../models");
+const { Admin } = require("../models");
+const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
 
 async function login(req, res) {
-  console.log("login...");
-  /* 
-    const { email, password } = req.body;
-    const user = await User.findOne({
-      where: { email: req.body.email },
-    });
-    if (user) {
-      const hash = user.password;
-      const checkPassword = await bcrypt.compare(password, hash);
+  const { email, password } = req.body;
+  const admin = await Admin.findOne({
+    where: { email: req.body.email },
+  });
+  if (admin) {
+    const match = admin.password === password;
+    //const checkPassword = await bcrypt.compare(password, hash);
 
-      if (checkPassword) {
-        const token = jwt.sign({ id: user.id }, `${process.env.SESSION_SECRET}`);
-        res.send({
-          token: token,
-          id: user._id,
-          firstname: user.firstname,
-          lastname: user.lastname,
-          address: user.address,
-          phone: user.phone,
-          avatar: user.avatar,
-        });
-      }
-    } else {
-      return res.status(404).json({ error: "Invalid credentials" });
+    if (match) {
+      const token = jwt.sign({ id: admin.id }, `${process.env.SESSION_SECRET}`);
+      res.status(200).json({
+        token: token,
+        avatar: admin.avatar,
+        email: admin.email,
+        password: admin.password,
+      });
     }
-    res.end();
-  } */
+  } else {
+    return res.status(404).json({ error: "Invalid credentials" });
+  }
 }
 
 // Otros handlers...

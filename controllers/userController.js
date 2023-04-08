@@ -107,7 +107,7 @@ async function login(req, res) {
 
     if (checkPassword) {
       const token = jwt.sign({ id: user.id }, `${process.env.SESSION_SECRET}`);
-      res.send({
+      res.status(200).json({
         token: token,
         id: user._id,
         firstname: user.firstname,
@@ -118,7 +118,8 @@ async function login(req, res) {
       });
     }
   } else {
-    return res.status(404).json({ error: "Invalid credentials" });
+    console.log("else..");
+    return res.status(404).send({ error: "Invalid credentials" });
   }
   res.end();
 }
