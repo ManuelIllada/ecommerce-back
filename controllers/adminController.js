@@ -4,6 +4,7 @@ const jwt = require("jsonwebtoken");
 
 async function login(req, res) {
   const { email, password } = req.body;
+
   const admin = await Admin.findOne({
     where: { email: req.body.email },
   });
