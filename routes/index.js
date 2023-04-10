@@ -7,6 +7,7 @@ const userRoutes = require("./userRoutes");
 const productRoutes = require("./productRoutes");
 const categoryRoutes = require("./categoryRoutes");
 const adminRoutes = require("./adminRoutes");
+const orderRoutes = require("./orderRoutes");
 
 /**
  * Otra alternativa podría ser organizar las rutas según su nivel de
@@ -30,4 +31,5 @@ module.exports = (app) => {
   app.use("/products", productRoutes);
   app.use("/categories", categoryRoutes);
   app.use("/panel", adminRoutes);
+  app.use("/order", orderRoutes);
 };

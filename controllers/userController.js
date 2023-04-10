@@ -112,7 +112,7 @@ async function login(req, res) {
       const token = jwt.sign({ id: user.id }, `${process.env.SESSION_SECRET}`);
       res.status(200).json({
         token: token,
-        id: user._id,
+        id: user.id,
         firstname: user.firstname,
         lastname: user.lastname,
         address: user.address,

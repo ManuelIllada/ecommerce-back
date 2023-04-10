@@ -30,11 +30,11 @@ Status.initModel(sequelize);
  * mismos (usando métodos como belongsTo, hasMany y belongsToMany)...
  */
 
-User.hasMany(Order);
-Order.belongsTo(User);
-
 Status.hasMany(Order);
 Order.belongsTo(Status);
+
+User.hasMany(Order);
+Order.belongsTo(User);
 
 Category.hasMany(Product);
 Product.belongsTo(Category);

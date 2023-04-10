@@ -11,6 +11,7 @@ class Order extends Model {
         },
         products: {
           type: DataTypes.JSON,
+          defaultValue: [],
         },
       },
       {
