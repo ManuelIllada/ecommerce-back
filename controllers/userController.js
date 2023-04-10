@@ -17,6 +17,7 @@ async function create(req, res) {}
 
 // Store a newly created resource in storage.
 async function store(req, res) {
+  console.log("store..");
   try {
     const form = formidable({
       multiples: false,
@@ -25,9 +26,11 @@ async function store(req, res) {
     });
 
     form.parse(req, async (err, fields, files) => {
+      console.log("fields: ", fields);
+      console.log("files: ", files);
       const { firstname, lastname, email, username, phone, address, password } = fields;
 
-      await User.create({
+      const user = await User.create({
         firstname: firstname,
         lastname: lastname,
         email: email,
