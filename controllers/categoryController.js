@@ -40,7 +40,7 @@ async function store(req, res) {
 
       await category.save();
 
-      return res.status(200).json({ messagers: "Categoria creada con Exito🚀 " });
+      return res.status(200).json({ message: "Categoria creada con Exito🚀 " });
     });
   } catch (err) {
     res.status(500).json({ error: err });
