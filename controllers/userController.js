@@ -119,10 +119,11 @@ async function login(req, res) {
         phone: user.phone,
         avatar: user.avatar,
       });
+      console.log("logeado..");
     }
   } else {
-    console.log("else..");
-    return res.status(404).send({ error: "Invalid credentials" });
+    console.log("Invalid credentials..");
+    return res.status(404).json({ error: "Invalid credentials" });
   }
   res.end();
 }
