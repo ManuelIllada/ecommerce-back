@@ -1,5 +1,5 @@
 const formidable = require("formidable");
-const { Order } = require("../models");
+const { Order, Product } = require("../models");
 
 // Display a listing of the resource.
 async function index(req, res) {
@@ -25,6 +25,13 @@ async function store(req, res) {
     });
 
     await order.save();
+
+    for (const item of products) {
+      const product = await Product.findByPk(item.id);
+      product.update({
+        stock: product.stock - item.quantity,
+      });
+    }
 
     return res.status(200).json({ message: "Orden creado con Exito🚀 " });
   } catch (error) {
