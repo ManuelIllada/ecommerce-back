@@ -9,7 +9,15 @@ async function index(req, res) {
 }
 
 // Display the specified resource.
-async function show(req, res) {}
+async function show(req, res) {
+  const products = await Product.findAll({
+    where: {
+      id: req.params.id,
+    },
+  });
+
+  res.json(products);
+}
 
 // Show the form for creating a new resource
 async function create(req, res) {}
