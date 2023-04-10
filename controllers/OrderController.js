@@ -2,9 +2,11 @@ const formidable = require("formidable");
 const { Order } = require("../models");
 
 // Display a listing of the resource.
-async function index(req, res) {}
-const orders = Order.findAll;
-return res.json(orders);
+async function index(req, res) {
+  const orders = await Order.findAll();
+  res.json(orders);
+}
+
 // Display the specified resource.
 async function show(req, res) {}
 
@@ -14,10 +16,10 @@ async function create(req, res) {}
 // Store a newly created resource in storage.
 async function store(req, res) {
   const { user, products } = req.body;
-  console.log(user);
+
   try {
     const order = await Order.create({
-      products: products.map((product) => product.id),
+      products: products.map((product) => ({ idProduct: product.id, quantity: product.quantity })),
       statusId: 1,
       userId: user.id,
     });
