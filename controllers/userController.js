@@ -36,7 +36,7 @@ async function store(req, res) {
         lastname: lastname,
         email: email,
         username: username,
-        password: password,
+        password: await bcrypt.hash(password, 8),
         phone: phone,
         address: address,
         avatar: files.avatar.newFilename,
