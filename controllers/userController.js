@@ -2,6 +2,7 @@ const { User } = require("../models");
 const formidable = require("formidable");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
+/* const isURL = require("url-validation"); */
 
 // Display a listing of the resource.
 async function index(req, res) {
@@ -56,15 +57,22 @@ async function edit(req, res) {}
 // Update the specified resource in storage.
 async function update(req, res) {
   const { id } = req.params;
+  const user = await User.findByPk(id);
   try {
     const form = formidable({
       multiples: true,
       uploadDir: __dirname + "/../public/img",
       keepExtensions: true,
     });
-
     form.parse(req, async (err, fields, files) => {
-      const { firstname, lastname, email, address, password, phone } = fields;
+      const { firstname, lastname, email, address, phone } = fields;
+
+      let avatarPath;
+      if (fields.avatar === user.avatar) {
+        avatarPath = fields.avatar;
+      } else {
+        avatarPath = files.avatar.newFilename;
+      }
 
       await User.update(
         {
@@ -72,9 +80,8 @@ async function update(req, res) {
           lastname: lastname,
           email: email,
           address: address,
-          password: password,
           phone: phone,
-          avatar: files.avatar.newFilename,
+          avatar: avatarPath,
         },
         { where: { id: id } },
       );
@@ -115,6 +122,7 @@ async function login(req, res) {
         id: user.id,
         firstname: user.firstname,
         lastname: user.lastname,
+        email: user.email,
         address: user.address,
         phone: user.phone,
         avatar: user.avatar,
