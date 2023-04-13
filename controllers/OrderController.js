@@ -18,19 +18,20 @@ async function store(req, res) {
   const { user, products } = req.body;
 
   try {
-    const order = await Order.create({
-      products: products.map((product) => ({ idProduct: product.id, quantity: product.quantity })),
+    await Order.create({
+      products: products.map((product) => ({
+        idProduct: product.id,
+        quantity: product.quantity,
+        price: product.price,
+      })),
       statusId: 1,
       userId: user.id,
     });
 
-    await order.save();
-
     for (const item of products) {
       const product = await Product.findByPk(item.id);
-      product.update({
-        stock: product.stock - item.quantity,
-      });
+      product.stock = product.stock - item.quantity;
+      await product.save();
     }
 
     return res.status(200).json({ message: "Orden creado con Exito🚀 " });
