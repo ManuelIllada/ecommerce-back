@@ -27,8 +27,6 @@ async function store(req, res) {
     });
 
     form.parse(req, async (err, fields, files) => {
-      console.log("fields: ", fields);
-      console.log("files: ", files);
       const { firstname, lastname, email, username, phone, address, password } = fields;
 
       const user = await User.create({
