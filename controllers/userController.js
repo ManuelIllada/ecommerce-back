@@ -112,12 +112,14 @@ async function login(req, res) {
     where: { email: req.body.email },
   });
   if (user) {
-    const hash = user.password;
-    const checkPassword = await bcrypt.compare(password, hash);
+    user.password;
+    const checkPassword = await bcrypt.compare(password, user.password);
 
     if (checkPassword) {
       const token = jwt.sign({ id: user.id }, `${process.env.SESSION_SECRET}`);
-      res.status(200).json({
+      res.json({
+        message: `Bienvenido: ${user.firstname} 🚀`,
+
         token: token,
         id: user.id,
         firstname: user.firstname,
@@ -127,13 +129,12 @@ async function login(req, res) {
         phone: user.phone,
         avatar: user.avatar,
       });
-      console.log("logeado..");
+    } else {
+      return res.json({ error: "Invalid credentials" });
     }
   } else {
-    console.log("Invalid credentials..");
-    return res.status(404).json({ error: "Invalid credentials" });
+    return res.json({ error: "Invalid credentials" });
   }
-  res.end();
 }
 
 module.exports = {
