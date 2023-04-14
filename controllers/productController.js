@@ -69,7 +69,8 @@ async function update(req, res) {
 
     form.parse(req, async (err, fields, files) => {
       const { name, description, price, stock, featured, category } = fields;
-
+      const medias = [];
+      medias.push(files.media);
       await Product.update(
         {
           name: name,
@@ -78,7 +79,7 @@ async function update(req, res) {
           stock: stock,
           featured: featured,
           categoryId: category,
-          media: files.media.map((file) => file.newFilename),
+          media: medias,
         },
         { where: { id: id } },
       );

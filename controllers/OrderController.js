@@ -29,6 +29,7 @@ async function store(req, res) {
   try {
     await Order.create({
       products: products.map((product) => ({
+        name: product.name,
         idProduct: product.id,
         quantity: product.quantity,
         price: product.price,
