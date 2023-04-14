@@ -1,9 +1,8 @@
 const { Status } = require("../models");
-
 module.exports = async () => {
   const statuses = [
     {
-      name: "Processing",
+      name: " Processing",
     },
     {
       name: "Sent",

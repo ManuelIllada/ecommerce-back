@@ -37,8 +37,15 @@ class Category extends Model {
           strict: false,
         });
       }
-    });
+    }),
+      Category.beforeCreate((instance, options) => {
+        instance.slug = slugify(instance.name);
+      });
+
     return Category;
+    function slugify(text) {
+      return text.toString().toLowerCase().trim().substring(0, 50); // Limita el slug a 50 caracteres
+    }
   }
 }
 
