@@ -33,8 +33,7 @@ async function store(req, res) {
 
     form.parse(req, async (err, fields, files) => {
       const { name, description, price, stock, featured, category } = fields;
-      if (name === "")
-        return res.status(500).json({ error: "No se puede crear una producto vacia 😢" });
+      if (name === "") return res.status(500).json({ error: "Cannot create an empty product 😢" });
 
       const product = await Product.create({
         name: name,
@@ -48,7 +47,7 @@ async function store(req, res) {
 
       await product.save();
 
-      return res.status(200).json({ message: "Producto creado con Exito🚀 " });
+      return res.status(200).json({ message: "Product created successfully🚀 " });
     });
   } catch (err) {
     res.status(500).json({ error: err });
@@ -84,7 +83,7 @@ async function update(req, res) {
         { where: { id: id } },
       );
 
-      return res.status(200).json({ message: "Producto editado con Exito🚀 " });
+      return res.status(200).json({ message: "Successfully edited product🚀 " });
     });
   } catch (err) {
     res.status(500).json({ error: err });
@@ -97,10 +96,10 @@ async function destroy(req, res) {
   const result = await Product.destroy({ where: { id: id } });
   if (result) {
     res.status(201).json({
-      message: "Borrado exitosamente 🚀",
+      message: "Deleted successfully 🚀",
     });
   } else {
-    res.status(400).json({ error: "Error al momento de Eliminar 😢" });
+    res.status(400).json({ error: "Error when deleting 😢" });
   }
 }
 
