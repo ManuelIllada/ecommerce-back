@@ -32,17 +32,17 @@ async function store(req, res) {
     });
 
     form.parse(req, async (err, fields, files) => {
-      const { name, description, price, stock, featured, category } = fields;
+      const { name, description, price, stock, category } = fields;
       if (name === "") return res.status(500).json({ error: "Cannot create an empty product 😢" });
-
+      console.log("length: ", files.media.length);
       const product = await Product.create({
         name: name,
         description: description,
         price: price,
         stock: stock,
-        featured: featured,
         categoryId: category,
-        media: files.media.map((file) => file.newFilename),
+        media: [files.media.newFilename],
+        //files.media >= 2 ? files.media.map((file) => [...files, file.newFilename]): [files.media.newFilename],
       });
 
       await product.save();

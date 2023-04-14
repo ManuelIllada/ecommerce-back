@@ -48,9 +48,15 @@ class Product extends Model {
           strict: false,
         });
       }
-    });
+    }),
+      Product.beforeCreate((instance, options) => {
+        instance.slug = slugify(instance.name);
+      });
 
     return Product;
+    function slugify(text) {
+      return text.toString().toLowerCase().trim().substring(0, 50); // Limita el slug a 50 caracteres
+    }
   }
 }
 
