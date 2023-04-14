@@ -25,7 +25,8 @@
     "sequelize": "^6.28.0",
     "slug": "^8.2.2",
     "slugify": "^1.6.5",
-    "sqlite3": "^5.0.8"
+    "sqlite3": "^5.0.8",
+    "url-validation": "^2.1.0"
   },
   "description": "Hack Academy - Ejemplo de MVC y Sequelize",
   "devDependencies": {

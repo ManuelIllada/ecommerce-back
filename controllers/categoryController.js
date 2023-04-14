@@ -28,14 +28,15 @@ async function store(req, res) {
     });
 
     form.parse(req, async (err, fields, files) => {
-      const { name } = fields;
-      if (name === "")
+      const { name, slug } = fields;
+      if (name === "" || slug === "")
         return res.status(500).json({ error: "No se puede crear una categoria vacia 😢" });
 
       const category = await Category.create({
         name: name,
         media: files.media.newFilename,
         cardImage: files.cardImage.newFilename,
+        slug: slug,
       });
 
       await category.save();
