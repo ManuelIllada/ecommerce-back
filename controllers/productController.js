@@ -71,7 +71,7 @@ async function update(req, res) {
     form.parse(req, async (err, fields, files) => {
       const { name, description, price, stock, featured, category } = fields;
 
-      const product = await Product.update(
+      await Product.update(
         {
           name: name,
           description: description,
