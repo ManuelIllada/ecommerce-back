@@ -33,5 +33,5 @@ module.exports = (app) => {
   app.use("/products", productRoutes);
   app.use("/categories", categoryRoutes);
   app.use("/panel", adminRoutes);
-  app.use("/order", orderRoutes);
+  app.use("/orders", orderRoutes);
 };

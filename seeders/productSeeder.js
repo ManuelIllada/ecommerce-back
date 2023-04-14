@@ -29,9 +29,9 @@ module.exports = async () => {
       description:
         "The SO4 Pro is the big brother of the SO4. If there was a racing series for e-scooters, the SO4 Pro would be the street version of it. Power and torque allow the scooter to go faster than usual, and the engine sound of the SO4 Pro makes any Formula E car fall silent. The SO4 Pro has a 500 Watt motor and has a range of up to 40 kilometers.",
       media: [
-        "https://i0.wp.com/www.soflow.com/app/uploads/blogs/21/2020/07/SO4_Pro_Display-scaled.jpg?resize=2048%2C1365&ssl=1",
-        "https://i1.wp.com/www.soflow.com/app/uploads/blogs/21/2020/07/SO4_Pro_Hero_Crop-scaled.jpg?resize=1919%2C2048&ssl=1",
-        "https://i1.wp.com/www.soflow.com/app/uploads/blogs/21/2020/07/SO4_Pro_Frontwheel-scaled.jpg?resize=2048%2C1365&ssl=1",
+        "https://media.discordapp.net/attachments/992571782294929533/1096454632563298354/SO4_Pro_Hero_Crop-scaled-removebg-preview.png",
+        "https://media.discordapp.net/attachments/992571782294929533/1096454632340983968/SO4_Pro_Frontwheel-scaled-removebg-preview.png",
+        "https://media.discordapp.net/attachments/992571782294929533/1096454008480202902/SO4_Pro_Display-scaled-removebg-preview.png",
       ],
       price: 799,
       stock: 10,
@@ -70,10 +70,10 @@ module.exports = async () => {
       description:
         "The scrapped EX2 will be replaced by a model that Begode is calling the EX 20S 3600WH. Redefine your riding passion with the latest innovation of Begode with cutting-edge technology and high quality. The Begode Gotway EX20 HS C30 electric unicycle is built with a hardcore aluminum frame, that withstands unfriendly environments including dust, sunlight, and mild rain. ",
       media: [
-        "https://cdn11.bigcommerce.com/s-r5k51kqrix/images/stencil/1280x1280/products/1524/4422/Extreme_Bull_EX2S_Product_Photo_WR_1__29734.1642783838.1280.1280__36067.1653510992.jpg?c=1?imbypass=on",
-        "https://cdn11.bigcommerce.com/s-r5k51kqrix/images/stencil/1280x1280/products/1524/4423/Extreme_Bull_EX2S_Product_Photo_WR_4__78456.1642783838.1280.1280__26587.1653510992.jpg?c=1?imbypass=on",
-        "https://cdn11.bigcommerce.com/s-r5k51kqrix/images/stencil/1280x1280/products/1524/4424/Extreme_Bull_EX2S_Product_Photo_WR_3__22543.1642783838.1280.1280__74866.1653510992.jpg?c=1?imbypass=on",
-        "https://cdn11.bigcommerce.com/s-r5k51kqrix/images/stencil/1280x1280/products/1524/4425/Extreme_Bull_EX2S_Product_Photo_WR_2__81712.1642783838.1280.1280__15433.1653510992.jpg?c=1?imbypass=on",
+        "https://media.discordapp.net/attachments/992571782294929533/1096455434778464256/Extreme_Bull_EX2S_Product_Photo_WR_1__29734.1642783838.1280.1280__36067-removebg-preview.png",
+        "https://media.discordapp.net/attachments/992571782294929533/1096455434472259704/Extreme_Bull_EX2S_Product_Photo_WR_4__78456.1642783838.1280.1280__26587-removebg-preview.png",
+        "https://media.discordapp.net/attachments/992571782294929533/1096455434203836528/Extreme_Bull_EX2S_Product_Photo_WR_3__22543.1642783838.1280.1280__74866-removebg-preview.png",
+        "https://media.discordapp.net/attachments/992571782294929533/1096455433746665522/Extreme_Bull_EX2S_Product_Photo_WR_2__81712.1642783838.1280.1280__15433-removebg-preview.png",
       ],
       price: 1500,
       stock: 5,
@@ -86,7 +86,7 @@ module.exports = async () => {
       description:
         "Pint X is fast, XR fast. The extra speed and torque crushes hills, provides excellent acceleration out of turns, and shaves time off longer trips.",
       media: [
-        "https://cdn11.bigcommerce.com/s-r5k51kqrix/images/stencil/608x608/products/1396/3797/OneWheel_Pint_X_Product_Photo_WR__51638.1635438718.jpg?c=1",
+        "https://media.discordapp.net/attachments/992571782294929533/1096455887771672606/OneWheel_Pint_X_Product_Photo_WR__51638-removebg-preview.png",
       ],
       price: 1900,
       stock: 3,
@@ -99,11 +99,11 @@ module.exports = async () => {
       description:
         "If you don't want to settle for an ordinary electric unicycle, and if you want a powerful ride in the form of a EUC, then this Gotway MCM5 electric unicycle is a perfect buy for you. This one has a maximum range of 50-70 KM along with a top speed of 30 km per hour. It weighs around 17 kg and it has a maximum loading capacity of 100 kgs.",
       media: [
-        "https://cdn11.bigcommerce.com/s-r5k51kqrix/images/stencil/1280x1280/products/1526/4447/Gotway%252520MCM5%252520Images%252520%2525283%252529__58929.1624270715.1280.1280__52021.1653672410.jpg?c=1?imbypass=on",
-        "https://cdn11.bigcommerce.com/s-r5k51kqrix/images/stencil/1280x1280/products/1526/4449/Gotway%252520MCM5%252520Images%252520%2525281%252529__75143.1624270715.1280.1280__23419.1659621263.jpg?c=1?imbypass=on",
-        "https://cdn11.bigcommerce.com/s-r5k51kqrix/images/stencil/1280x1280/products/1526/4450/Gotway%252520MCM5%252520Images%252520%2525282%252529__26534.1624270715.1280.1280__31986.1659621263.jpg?c=1?imbypass=on",
-        "https://cdn11.bigcommerce.com/s-r5k51kqrix/images/stencil/1280x1280/products/1526/4446/Gotway%252520MCM5%252520Images%252520%2525284%252529__35855.1624270715.1280.1280__65572.1659621263.jpg?c=1?imbypass=on",
-        "https://cdn11.bigcommerce.com/s-r5k51kqrix/images/stencil/1280x1280/products/1526/4448/Gotway%252520MCM5%252520Images%252520%2525285%252529__90709.1624270715.1280.1280__95598.1659621263.jpg?c=1?imbypass=on",
+        "https://media.discordapp.net/attachments/992571782294929533/1096456613994446868/Gotway2520Images25284_29__35855.1624270715.1280.1280__65572-removebg-preview.png",
+        "https://media.discordapp.net/attachments/992571782294929533/1096456614246088704/Gotway2520Images25285_29__90709.1624270715.1280.1280__95598-removebg-preview.png",
+        "https://media.discordapp.net/attachments/992571782294929533/1096456614690701392/Gotway2520Images25281_29__75143.1624270715.1280.1280__23419-removebg-preview.png",
+        "https://media.discordapp.net/attachments/992571782294929533/1096456615068176514/Gotway2520Images25282_29__26534.1624270715.1280.1280__31986-removebg-preview.png",
+        "https://media.discordapp.net/attachments/992571782294929533/1096456615349190809/Gotway2520Images25283_29__58929.1624270715.1280.1280__52021-removebg-preview.png",
       ],
       price: 2699,
       stock: 3,
@@ -116,10 +116,10 @@ module.exports = async () => {
       description:
         "The new model from Kingsong S22 Eagle, The successor of the S18 Suspension wheel, is Upgraded, and Retuned! The design theme of the S22 is one of a highly focused and highly tuned off-road machine.",
       media: [
-        "https://cdn11.bigcommerce.com/s-r5k51kqrix/images/stencil/1280x1280/products/1366/4787/KingSong_KS_S22_Electric_Unicycle_1__51425.1656006536.jpg?c=1?imbypass=on",
-        "https://cdn11.bigcommerce.com/s-r5k51kqrix/images/stencil/1280x1280/products/1366/4790/KingSong_KS_S22_Electric_Unicycle_3__52662.1671637951.jpg?c=1?imbypass=on",
-        "https://cdn11.bigcommerce.com/s-r5k51kqrix/images/stencil/1280x1280/products/1366/4786/KingSong_KS_S22_Electric_Unicycle_4__30585.1671637951.jpg?c=1?imbypass=on",
-        "https://cdn11.bigcommerce.com/s-r5k51kqrix/images/stencil/1280x1280/products/1366/4788/KingSong_KS_S22_Electric_Unicycle_2__57902.1659592765.jpg?c=1?imbypass=on",
+        "https://media.discordapp.net/attachments/992571782294929533/1096457269463490560/KingSong_KS_S22_Electric_Unicycle_1__51425-removebg-preview.png",
+        "https://media.discordapp.net/attachments/992571782294929533/1096457269161504878/KingSong_KS_S22_Electric_Unicycle_4__30585-removebg-preview.png",
+        "https://media.discordapp.net/attachments/992571782294929533/1096457268586881094/KingSong_KS_S22_Electric_Unicycle_3__52662-removebg-preview.png",
+        "https://media.discordapp.net/attachments/992571782294929533/1096457268339413022/KingSong_KS_S22_Electric_Unicycle_2__57902-removebg-preview.png",
       ],
       price: 2699,
       stock: 3,
@@ -132,7 +132,7 @@ module.exports = async () => {
       description:
         "LOU is a light, fast, and maneuverable electric skateboard with a hidden battery in the deck and motorized wheels. Built for speed, range, and reliability, LOU is the ultimate electric skateboard.",
       media: [
-        "https://i2.wp.com/www.soflow.com/app/uploads/blogs/21/2019/12/Lou-Board-2.jpg?resize=892%2C1024&ssl=1",
+        "https://media.discordapp.net/attachments/992571782294929533/1096457730929217576/Lou-Board-2-removebg-preview.png",
       ],
       price: 2699,
       stock: 3,
@@ -145,9 +145,9 @@ module.exports = async () => {
       description:
         "Pioneer X4, which is the full upgrade of the classic board 3X, can reach a Top Speed of 45kph/28mph and a Real Range of 21miles/33km under real test conditions. (The tester weighed 75kg and traveled at 18mph/30kph on 90mm wheels).",
       media: [
-        "https://cdn.shopify.com/s/files/1/2288/1981/products/8_0549625d-906b-4e4e-aa0e-6549222d407f_540x.jpg?v=1678420777",
-        "https://cdn.shopify.com/s/files/1/2288/1981/products/10_73c07388-2f85-4d74-9b4b-3e5ac8d26d9c_540x.jpg?v=1678420777",
-        "https://cdn.shopify.com/s/files/1/2288/1981/products/5_b302f9ab-26f0-40b9-9384-8ebe64432216_540x.jpg?v=1678420777",
+        "https://media.discordapp.net/attachments/992571782294929533/1096458328332308653/5_b302f9ab-26f0-40b9-9384-8ebe64432216_540x-removebg-preview.png",
+        "https://media.discordapp.net/attachments/992571782294929533/1096458328676257812/8_0549625d-906b-4e4e-aa0e-6549222d407f_540x-removebg-preview.png",
+        "https://media.discordapp.net/attachments/992571782294929533/1096458329066311820/10_73c07388-2f85-4d74-9b4b-3e5ac8d26d9c_540x-removebg-preview.png",
       ],
       price: 2699,
       stock: 3,
@@ -175,7 +175,7 @@ module.exports = async () => {
       description:
         "Switch now to the new SO Bike. The model in minimalist design provides with its carbon belt drive and the five support levels for a unique driving performance. With a speed of up to 25 km/h, the SO Bike brings its owner safely and sustainably to his destination. The speed indicator, the battery life and the set modes are always in view thanks to the display on the handlebars.",
       media: [
-        "https://i1.wp.com/www.soflow.com/app/uploads/blogs/21/2021/12/01_SO_Bike_Packshot_Produktbild.png?resize=1024%2C731&ssl=1",
+        "https://media.discordapp.net/attachments/992571782294929533/1096458688216178848/01_SO_Bike_Packshot_Produktbild-removebg-preview.png",
       ],
       price: 2699,
       stock: 3,
@@ -188,10 +188,10 @@ module.exports = async () => {
       description:
         "Hoverboards reimagined for practical use: effortlessly glide for up to four hours. Powered by an efficient brushless motor, the Flowpad Pro is agile, versatile and light. The engine has a load-bearing capacity of 100kg with a power output of 300 Watts. Now available here!",
       media: [
-        "https://i0.wp.com/www.soflow.com/app/uploads/blogs/21/2022/07/FlowpadPro_Side.png?w=892&ssl=1",
-        "https://i1.wp.com/www.soflow.com/app/uploads/blogs/21/2022/07/FlowpadPro_Front.png?w=892&ssl=1",
-        "https://i1.wp.com/www.soflow.com/app/uploads/blogs/21/2022/07/FlowpadPro_Side_Detail.png?w=892&ssl=1",
-        "https://i1.wp.com/www.soflow.com/app/uploads/blogs/21/2022/07/FlowpadPro_Wheel.png?w=892&ssl=1",
+        "https://media.discordapp.net/attachments/992571782294929533/1096459517392326767/FlowpadPro_Front-removebg-preview.png",
+        "https://media.discordapp.net/attachments/992571782294929533/1096459517648195644/FlowpadPro_Side_Detail-removebg-preview.png",
+        "https://media.discordapp.net/attachments/992571782294929533/1096459517983723590/FlowpadPro_Side-removebg-preview.png",
+        "https://media.discordapp.net/attachments/992571782294929533/1096459518268952606/FlowpadPro_Wheel-removebg-preview.png",
       ],
       price: 2699,
       stock: 3,
@@ -204,9 +204,9 @@ module.exports = async () => {
       description:
         "KinetiCore technology protects against both direct and rotational impact thanks to unique EPS foam blocks called controlled crumple zones that crumple under impact and absorb the energy that otherwise would have reached the cyclist's brain.  As KinetiCore is built-in, it means the helmets are designed with innovative vents that channel cool air through to the back of the helmet and expel warm air.  KinetiCore is integrated into the helmet rather than added on as an additional feature, so less material is used.  This means that the helmets are also lighter.",
       media: [
-        "https://cdn.media.halfords.com/i/washford/714150?w=740&h=555&qlt=default&fmt=auto&v=1",
-        "https://cdn.media.halfords.com/i/washford/714150a?w=740&h=555&qlt=default&fmt=auto&v=1",
-        "https://cdn.media.halfords.com/i/washford/714150c?w=740&h=555&qlt=default&fmt=auto&v=1",
+        "https://media.discordapp.net/attachments/992571782294929533/1096460202766766161/714150-removebg-preview.png",
+        "https://media.discordapp.net/attachments/992571782294929533/1096460203416883230/714150c-removebg-preview.png",
+        "https://media.discordapp.net/attachments/992571782294929533/1096460560566067331/714150a-removebg-preview.png",
       ],
       price: 2699,
       stock: 3,
@@ -219,8 +219,8 @@ module.exports = async () => {
       description:
         "Designed by Revzilla, the durable, breathable and waterproof Ridge gloves are eager to grab a handful of whatever’s in store down the road (or lack thereof).",
       media: [
-        "https://www.revzilla.com/product_images/0384/0372/reax_ridge_wp_gloves_grey_black_750x750.jpg",
-        "https://www.revzilla.com/product_images/0384/0389/reax_ridge_wp_gloves_grey_black_750x750.jpg",
+        "https://media.discordapp.net/attachments/992571782294929533/1096460884836106281/reax_ridge_wp_gloves_grey_black_750x750-removebg-preview.png",
+        "https://media.discordapp.net/attachments/992571782294929533/1096460884576055336/reax_ridge_wp_gloves_grey_black_750x750__1_-removebg-preview.png",
       ],
       price: 25,
       stock: 3,
