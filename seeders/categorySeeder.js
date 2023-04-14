@@ -55,7 +55,7 @@ module.exports = async () => {
     {
       name: "Accessories",
       media:
-        "https://p.vitalmtb.com/photos/features/2798/title_image_mobile/s1600_Holiday_Gift_Guide_Groms_993206.jpg",
+        "https://media.discordapp.net/attachments/992571782294929533/1096466014377619567/photo-1626275850959-2f19cd600b0f.png?width=1059&height=702",
       cardImage:
         "https://cdn.discordapp.com/attachments/992571782294929533/1088901648262381698/accesorios.jpg",
     },
