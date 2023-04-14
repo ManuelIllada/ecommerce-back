@@ -29,9 +29,9 @@ module.exports = async () => {
       description:
         "The SO4 Pro is the big brother of the SO4. If there was a racing series for e-scooters, the SO4 Pro would be the street version of it. Power and torque allow the scooter to go faster than usual, and the engine sound of the SO4 Pro makes any Formula E car fall silent. The SO4 Pro has a 500 Watt motor and has a range of up to 40 kilometers.",
       media: [
-        "https://i0.wp.com/www.soflow.com/app/uploads/blogs/21/2020/07/SO4_Pro_Display-scaled.jpg?resize=2048%2C1365&ssl=1",
         "https://i1.wp.com/www.soflow.com/app/uploads/blogs/21/2020/07/SO4_Pro_Hero_Crop-scaled.jpg?resize=1919%2C2048&ssl=1",
         "https://i1.wp.com/www.soflow.com/app/uploads/blogs/21/2020/07/SO4_Pro_Frontwheel-scaled.jpg?resize=2048%2C1365&ssl=1",
+        "https://i0.wp.com/www.soflow.com/app/uploads/blogs/21/2020/07/SO4_Pro_Display-scaled.jpg?resize=2048%2C1365&ssl=1",
       ],
       price: 799,
       stock: 10,
